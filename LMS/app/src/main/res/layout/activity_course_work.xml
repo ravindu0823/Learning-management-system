@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".course_work"
+    android:orientation="vertical">
+
+
+    <TextView
+
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/black"
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+        android:text="Final Report Submission Link"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/ic_baseline_picture_as_pdf_24"
+        android:drawablePadding="20dp"
+        android:text="Upload a pdf document here."
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginLeft="70dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView1"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:shrinkColumns="*"
+        android:background="@drawable/table_border"
+        android:layout_marginTop="20dp">
+
+        <TableRow>
+            <TextView
+                android:text="Group"
+                android:padding="10dp"
+                android:background="@drawable/cell_border" />
+            <TextView
+                android:text="ab"
+                android:padding="10dp"
+                android:background="@drawable/cell_border" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Due date"
+                android:padding="10dp"
+                android:background="@drawable/cell_border" />
+            <TextView
+                android:text="cd"
+                android:padding="10dp"
+                android:background="@drawable/cell_border" />
+        </TableRow>
+
+
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="File Submission"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Maximum file size: 150MB, maximum number of files: 1"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView1"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+
+    <View
+        android:layout_width="390dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/rectangle_border" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Save Changes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="50dp"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:backgroundTint="@color/gray"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="70dp"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</LinearLayout>
