@@ -15,5 +15,6 @@ public class lecture_materials extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_lecture_materials, container, false);
+
     }
 }

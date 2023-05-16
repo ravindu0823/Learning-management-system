@@ -28,6 +28,7 @@ public class module_overview extends Fragment {
         View view = inflater.inflate(R.layout.fragment_module_overview, container, false);
 
         Button button1 = view.findViewById(R.id.button1);
+        Button button2 = view.findViewById(R.id.button2);
 
         // Set a click listener for the button
         button1.setOnClickListener(new View.OnClickListener() {
@@ -40,10 +41,37 @@ public class module_overview extends Fragment {
                 transaction.remove(module_overview.this);
 
                 // Add the new fragment
-                Fragment lecture_materials = new lecture_materials();
-                transaction.add(R.id.drawer_layout, lecture_materials);
+                Fragment lecture_material = new lecture_materials();
+               /* transaction.add(R.id.drawer_layout, lecture_material);
                 transaction.addToBackStack(null); // Optional: Add the transaction to the back stack
+                transaction.commit();*/
+
+                transaction.replace(container.getId(), lecture_material);
+                transaction.addToBackStack(null);
                 transaction.commit();
+
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an instance of the fragment you want to replace
+
+
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.remove(module_overview.this);
+
+                // Add the new fragment
+                Fragment course_works2 = new courceWork2();
+               /* transaction.add(R.id.drawer_layout, course_works2);
+                transaction.addToBackStack(null); // Optional: Add the transaction to the back stack
+                transaction.commit();*/
+
+                transaction.replace(container.getId(), course_works2);
+                transaction.addToBackStack(null);
+                transaction.commit();
+
             }
         });
 

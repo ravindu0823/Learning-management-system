@@ -42,17 +42,6 @@ tools:ignore="HardcodedText">
         android:textSize="20sp"
         tools:ignore="TextContrastCheck" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="300dp"
-        android:layout_height="90dp"
-        android:layout_marginBottom="56dp"
-        android:background="@drawable/rounded_button_bg"
-        app:backgroundTint="@color/purple_200"
-        android:text="Exams"
-        android:textSize="20sp"
-        tools:ignore="TextContrastCheck" />
-
 
 </LinearLayout>
 
