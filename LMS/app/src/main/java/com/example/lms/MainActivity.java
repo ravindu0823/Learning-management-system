@@ -7,7 +7,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -36,28 +35,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         if (savedInstanceState == null) {
-            Intent activity2Intent = new Intent(getApplicationContext(), lecture_materials.class);
-            navigationView.setCheckedItem(R.id.nav_home);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new cardView()).commit();
+            navigationView.setCheckedItem(R.id.nav_profile);
         }
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.nav_home:
-                Intent intent = new Intent(MainActivity.this, Assigments.class);
+            case R.id.nav_profile:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new profile()).commit();
                 break;
 
-            case R.id.nav_setting:
-                Intent intent1 = new Intent(MainActivity.this, profile.class);
+            case R.id.nav_module:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new cardView()).commit();
                 break;
 
-            case R.id.nav_share:
-                Intent intent2 = new Intent(MainActivity.this, module_overview.class);
+            case R.id.nav_schedule:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new shedule()).commit();
                 break;
 
-            case R.id.nav_about:
-                Intent intent3 = new Intent(MainActivity.this, shedule.class);
+            case R.id.nav_marks:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new module_overview()).commit();
                 break;
 
             case R.id.nav_logout:

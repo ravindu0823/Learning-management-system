@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".card_view">
+    tools:context=".cardView">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -87,6 +87,10 @@
             android:text="Module 01" />
 
     </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
 

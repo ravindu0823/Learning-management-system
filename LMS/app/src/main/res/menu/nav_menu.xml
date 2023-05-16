@@ -8,24 +8,24 @@
             android:checkableBehavior="single">
 
             <item
-                android:id="@+id/nav_home"
-                android:icon="@drawable/nav_home"
-                android:title="Home"/>
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/nav_profile"
+                android:title="Profile"/>
 
             <item
-                android:id="@+id/nav_setting"
-                android:icon="@drawable/nav_setting"
-                android:title="Settings"/>
+                android:id="@+id/nav_module"
+                android:icon="@drawable/modules"
+                android:title="Module"/>
 
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/nav_share"
-                android:title="Share"/>
+                android:id="@+id/nav_schedule"
+                android:icon="@drawable/schedules"
+                android:title="Schedule"/>
 
             <item
-                android:id="@+id/nav_about"
-                android:icon="@drawable/nav_about"
-                android:title="About Us"/>
+                android:id="@+id/nav_marks"
+                android:icon="@drawable/nav_marks"
+                android:title="Marks"/>
         </group>
         <item
             android:title="">

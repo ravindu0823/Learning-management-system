@@ -8,6 +8,13 @@
     <string name="nav_close" />
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cardview">cardview</string>
+    <string name="assignment">assigmnet</string>
+    <string name="coursework">coursework</string>
+    <string name="login">login</string>
+    <string name="username">Username</string>
 
 
 </resources>

@@ -9,7 +9,7 @@
     android:id="@+id/my_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".module_overview"
+    tools:context=".shedule"
 
     tools:ignore="HardcodedText">
 
@@ -27,7 +27,7 @@
             android:layout_marginBottom="56dp"
             android:background="@drawable/rounded_button_bg"
             app:backgroundTint="@color/purple_200"
-            android:text="Lecture Materials"
+            android:text="Lecture Schedule"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
 
@@ -38,26 +38,14 @@
             android:layout_marginBottom="56dp"
             android:background="@drawable/rounded_button_bg"
             app:backgroundTint="@color/purple_200"
-            android:text="Assignments"
+            android:text="Exam Schedule"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="300dp"
-            android:layout_height="90dp"
-            android:layout_marginBottom="56dp"
-            android:background="@drawable/rounded_button_bg"
-            app:backgroundTint="@color/purple_200"
-            android:text="Exams"
-            android:textSize="20sp"
-            tools:ignore="TextContrastCheck" />
+
 
 
     </LinearLayout>
-
-    <!-- this the navigation view which draws and shows the navigation drawer -->
-    <!-- include the menu created in the menu folder -->
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
