@@ -14,5 +14,6 @@
     <color name="light_blue">#65B3EC</color>
     <color name="appbar_color" />
     <color name="lecture_mat_color">#65B3EC</color>
+    <color name="red">#D02020</color>
     <color name="lecture_mat_text_color">#1554F6</color>
 </resources>

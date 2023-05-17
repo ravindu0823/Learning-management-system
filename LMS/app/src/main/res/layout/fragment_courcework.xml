@@ -47,7 +47,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+
         android:background="@drawable/table_border"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:shrinkColumns="*"
         android:stretchColumns="*">
 
@@ -56,10 +59,12 @@
             <TextView
                 android:background="@drawable/cell_border"
                 android:padding="10dp"
+                android:backgroundTint="@color/lecture_mat_color"
                 android:text="Group" />
 
             <TextView
                 android:background="@drawable/cell_border"
+                android:backgroundTint="@color/lecture_mat_color"
                 android:padding="10dp"
                 android:text="ab" />
         </TableRow>
@@ -68,11 +73,13 @@
 
             <TextView
                 android:background="@drawable/cell_border"
+                android:backgroundTint="@color/lecture_mat_color"
                 android:padding="10dp"
                 android:text="Due date" />
 
             <TextView
                 android:background="@drawable/cell_border"
+                android:backgroundTint="@color/lecture_mat_color"
                 android:padding="10dp"
                 android:text="cd" />
         </TableRow>
@@ -108,49 +115,62 @@
         app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
-
-    <View
-        android:layout_width="390dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="10dp"
-        android:background="@drawable/rectangle_border" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="150dp">
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:text="Save Changes"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/guideline"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/myView"
+            android:layout_width="390dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rectangle_border" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="70dp"
-            android:backgroundTint="@color/gray"
-            android:text="Cancel"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/guideline"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="1" />
+            android:src="@drawable/ic_baseline_library_add_24"
+            android:layout_centerInParent="true" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="230dp">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Save Changes"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="70dp"
+                android:backgroundTint="@color/red"
+                android:text="Cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
 
 
 </LinearLayout>

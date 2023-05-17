@@ -5,71 +5,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/lecture_mat_color"
     tools:context=".CourseWorks">
 
-    <TextView
-
-        android:id="@+id/text1"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/courcework_pic"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="100dp"
-        android:drawableStart="@drawable/pdf"
-        android:drawablePadding="20dp"
-        android:text="Course Work Submission"
-        android:textAlignment="gravity"
-        android:textColor="@color/blue"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/parent"
-        app:layout_constraintStart_toStartOf="@+id/parent"
-        app:layout_constraintTop_toBottomOf="@+id/parent" />
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/Slide1"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:drawableStart="@drawable/ic_baseline_picture_as_pdf_24"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:text="Final Courcework"
+            android:textStyle="bold"
+            android:textColor="@color/lecture_mat_text_color"
+            android:textSize="22sp"/>
+
+        <Button
+            android:id="@+id/btnlecMat1"
+            android:layout_width="133dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="@color/dark_blue"
+            android:minHeight="48dp"
+            android:text="Download"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/Slide2"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:drawableStart="@drawable/ic_baseline_picture_as_pdf_24"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:text="Final Assignment"
+            android:textStyle="bold"
+            android:textColor="@color/lecture_mat_text_color"
+            android:textSize="22sp"/>
+
+        <Button
+            android:id="@+id/btnlecMat2"
+            android:layout_width="133dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="@color/dark_blue"
+            android:minHeight="48dp"
+            android:text="Download"
+            android:textColor="@color/white" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/text2"
+        android:id="@+id/Slide3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="20dp"
-        android:drawableStart="@drawable/ic_baseline_picture_as_pdf_24"
-        android:drawablePadding="20dp"
-        android:text="Course Work Submission"
-        android:textAlignment="gravity"
-        android:textColor="@color/blue"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView1"
-        app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:drawableStart="@drawable/link"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="30dp"
+        android:text="Code Submission"
+        android:textStyle="bold"
+        android:textColor="@color/lecture_mat_text_color"
+        android:textSize="22sp"/>
 
     <TextView
-        android:id="@+id/text3"
+        android:id="@+id/Slide4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="20dp"
-        android:drawableStart="@drawable/ic_baseline_picture_as_pdf_24"
-        android:drawablePadding="20dp"
-        android:text="Course Work Submission"
-        android:textAlignment="gravity"
-        android:textColor="@color/blue"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <TextView
-        android:id="@+id/text4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="20dp"
-        android:drawableStart="@drawable/ic_baseline_picture_as_pdf_24"
-        android:drawablePadding="20dp"
-        android:text="Course Work Submission"
-        android:textAlignment="gravity"
-        android:textColor="@color/blue"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:drawableStart="@drawable/link"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="30dp"
+        android:text="Final Report Submission"
+        android:textStyle="bold"
+        android:textColor="@color/lecture_mat_text_color"
+        android:textSize="22sp"/>
 
 </LinearLayout>
