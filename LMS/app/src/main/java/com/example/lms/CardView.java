@@ -51,10 +51,13 @@ public class CardView extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Module module = new Module();
-                    module.setModuleName(dataSnapshot.getKey());
-                    Log.d("TAG", "onDataChange: " + dataSnapshot.getKey());
+                    module.setModuleDescription(dataSnapshot.child("name").getValue().toString());
                     module.setDegreeProgramme(degree);
+                    module.setModuleName(dataSnapshot.getKey());
                     list.add(module);
+
+                    Log.d("TAG", "onDataChange: " + dataSnapshot.getKey());
+                    Log.d("TAG", "onDataChange Module Name: " + dataSnapshot.child("name").getValue().toString());
                 }
                 moduleAdapter.notifyDataSetChanged();
             }

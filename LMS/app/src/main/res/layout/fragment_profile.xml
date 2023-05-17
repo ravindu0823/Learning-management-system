@@ -8,6 +8,16 @@
     android:padding="15dp"
     tools:context=".Profile">
 
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgUserProfile"
+        android:layout_width="172dp"
+        android:layout_height="175dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic01"
+        app:riv_oval="true" />
 
     <TextView
         android:id="@+id/profile_name"
@@ -38,7 +48,8 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/edittext_border"
         android:drawableStart="@drawable/ic_baseline_email_24"
-        android:drawablePadding="20dp" />
+        android:drawablePadding="20dp"
+        android:editable="false" />
 
     <TextView
         android:layout_width="match_parent"
@@ -50,7 +61,6 @@
         android:textColor="@color/gray"
         android:textSize="16sp" />
 
-    <!-- Second EditText -->
     <EditText
         android:id="@+id/txtStudentID"
         android:layout_width="match_parent"
@@ -58,16 +68,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/edittext_border"
         android:drawableStart="@drawable/ic_baseline_account_circle_24"
-        android:drawablePadding="20dp" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/button_border"
-        android:text=" Update User Details"
-        android:textColor="@color/black" />
-
+        android:drawablePadding="20dp"
+        android:editable="false" />
 
 </LinearLayout>

@@ -41,4 +41,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
     implementation 'androidx.cardview:cardview:1.0.0'
 
+    // Rounded Image View
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
 }

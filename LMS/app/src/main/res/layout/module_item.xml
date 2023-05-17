@@ -12,10 +12,10 @@
 
         <!-- Media -->
         <ImageView
+            android:id="@+id/module_image"
             android:layout_width="match_parent"
             android:layout_height="194dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/pic01" />
+            android:scaleType="centerCrop" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,20 +26,20 @@
             <!-- Title, secondary and supporting text -->
             <TextView
                 android:id="@+id/module_name"
-                android:textSize="21sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Module Name" />
+                android:text="Module Name"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/degree_program"
-                android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Degree Program" />
+                android:text="Degree Program"
+                android:textSize="16sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -48,7 +48,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnLectureMaterials"
+                    android:id="@+id/btn_Lecture_Materials"
                     style="?attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
                     android:text="Lecture Materials" />
 
                 <Button
-                    android:id="@+id/btnAssignments"
+                    android:id="@+id/btn_Assignments"
                     style="?attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

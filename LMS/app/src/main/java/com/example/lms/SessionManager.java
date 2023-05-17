@@ -15,7 +15,14 @@ public class SessionManager {
     String PASSWORD = "";
     int STUDENT_ID;
 
-    String DISEASE_NAME = "";
+    String MODULE_NAME = "";
+    String MODULE_DESCRIPTION = "";
+
+    public void saveModuleName(Module module) {
+        MODULE_NAME = module.getModuleName();
+
+        editor.putString("module_name", MODULE_NAME).commit();
+    }
 
     public SessionManager(Context context) {
         sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
@@ -82,6 +89,10 @@ public class SessionManager {
 
     public String getDegree() {
         return sharedPreferences.getString("degree", null);
+    }
+
+    public String getModuleName() {
+        return sharedPreferences.getString("module_name", null);
     }
 
 }

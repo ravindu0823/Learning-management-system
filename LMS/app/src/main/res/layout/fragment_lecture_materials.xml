@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/my_drawer_layout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LectureMaterials"
-    tools:ignore="HardcodedText">
+    tools:context=".LectureMaterials">
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:padding="20dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="25dp"
-        android:layout_marginBottom="2dp"
-        android:dividerPadding="12dp"
         android:orientation="vertical">
 
 
@@ -44,4 +40,4 @@
     </LinearLayout>
 
 
-</androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>
