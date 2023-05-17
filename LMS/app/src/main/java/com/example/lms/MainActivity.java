@@ -29,13 +29,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav,
-                R.string.close_nav);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new cardView()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CardView()).commit();
             navigationView.setCheckedItem(R.id.nav_profile);
         }
     }
@@ -44,19 +43,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_profile:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new profile()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Profile()).commit();
                 break;
 
             case R.id.nav_module:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new cardView()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CardView()).commit();
                 break;
 
             case R.id.nav_schedule:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Shedule()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Schedule()).commit();
                 break;
 
             case R.id.nav_marks:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new module_overview()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ModuleOverview()).commit();
                 break;
 
             case R.id.nav_logout:

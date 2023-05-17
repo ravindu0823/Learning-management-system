@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".courcework"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".UploadCourseWorks">
 
 
     <TextView
@@ -19,8 +19,8 @@
         android:paddingBottom="10dp"
         android:text="Final Report Submission Link"
         android:textAlignment="center"
-        android:textSize="24sp"
         android:textColor="@color/black"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,6 +30,7 @@
         android:id="@+id/text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="10dp"
         android:drawableStart="@drawable/ic_baseline_picture_as_pdf_24"
         android:drawablePadding="20dp"
@@ -37,7 +38,6 @@
         android:textAlignment="gravity"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:layout_marginLeft="70dp"
         app:layout_constraintEnd_toEndOf="@+id/textView1"
         app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
@@ -46,33 +46,36 @@
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stretchColumns="*"
-        android:shrinkColumns="*"
+        android:layout_marginTop="20dp"
         android:background="@drawable/table_border"
-        android:layout_marginTop="20dp">
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
 
         <TableRow>
+
             <TextView
-                android:text="Group"
+                android:background="@drawable/cell_border"
                 android:padding="10dp"
-                android:background="@drawable/cell_border" />
+                android:text="Group" />
+
             <TextView
-                android:text="ab"
+                android:background="@drawable/cell_border"
                 android:padding="10dp"
-                android:background="@drawable/cell_border" />
+                android:text="ab" />
         </TableRow>
 
         <TableRow>
-            <TextView
-                android:text="Due date"
-                android:padding="10dp"
-                android:background="@drawable/cell_border" />
-            <TextView
-                android:text="cd"
-                android:padding="10dp"
-                android:background="@drawable/cell_border" />
-        </TableRow>
 
+            <TextView
+                android:background="@drawable/cell_border"
+                android:padding="10dp"
+                android:text="Due date" />
+
+            <TextView
+                android:background="@drawable/cell_border"
+                android:padding="10dp"
+                android:text="cd" />
+        </TableRow>
 
 
     </TableLayout>
@@ -81,12 +84,12 @@
         android:id="@+id/text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
         android:text="File Submission"
         android:textAlignment="gravity"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:layout_marginLeft="15dp"
         app:layout_constraintEnd_toEndOf="@+id/tableLayout"
         app:layout_constraintStart_toStartOf="@+id/tableLayout"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
@@ -95,12 +98,12 @@
         android:id="@+id/text4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="10dp"
         android:text="Maximum file size: 150MB, maximum number of files: 1"
         android:textAlignment="gravity"
         android:textColor="@color/black"
         android:textSize="15sp"
-        android:layout_marginLeft="16dp"
         app:layout_constraintEnd_toEndOf="@+id/textView1"
         app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
@@ -121,25 +124,24 @@
             android:id="@+id/button1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
             android:text="Save Changes"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/guideline"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginLeft="50dp"/>
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Cancel"
-            android:backgroundTint="@color/gray"
-            app:layout_constraintStart_toEndOf="@id/guideline"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginRight="70dp"
-            />
+            android:backgroundTint="@color/gray"
+            android:text="Cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
@@ -149,10 +151,6 @@
             app:layout_constraintGuide_percent="1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
 
 
 </LinearLayout>

@@ -1,28 +1,21 @@
 package com.example.lms;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.view.View;
-import android.view.ViewGroup;
-import android.os.Bundle;
-import android.widget.Button;
-import android.widget.TextView;
+
 import androidx.fragment.app.FragmentTransaction;
 
 
-public class module_overview extends Fragment {
+public class ModuleOverview extends Fragment {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_module_overview, container, false);
@@ -38,10 +31,10 @@ public class module_overview extends Fragment {
 
 
                 FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.remove(module_overview.this);
+                transaction.remove(ModuleOverview.this);
 
                 // Add the new fragment
-                Fragment lecture_material = new lecture_materials();
+                Fragment lecture_material = new LectureMaterials();
                /* transaction.add(R.id.drawer_layout, lecture_material);
                 transaction.addToBackStack(null); // Optional: Add the transaction to the back stack
                 transaction.commit();*/
@@ -60,10 +53,10 @@ public class module_overview extends Fragment {
 
 
                 FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.remove(module_overview.this);
+                transaction.remove(ModuleOverview.this);
 
                 // Add the new fragment
-                Fragment course_works2 = new courceWork2();
+                Fragment course_works2 = new CourseWorks();
                /* transaction.add(R.id.drawer_layout, course_works2);
                 transaction.addToBackStack(null); // Optional: Add the transaction to the back stack
                 transaction.commit();*/

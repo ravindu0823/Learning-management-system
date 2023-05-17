@@ -1,70 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-android:padding="15dp"
-tools:context=".profile">
-
-
-<TextView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="1dp"
-    android:layout_marginTop="10dp"
-    android:gravity="left"
-    android:text="Email"
-    android:textColor="@color/gray"
-    android:textSize="16sp" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".Profile">
 
-<!-- First EditText -->
-<EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:background="@drawable/edittext_border"
-    android:drawableStart="@drawable/ic_baseline_email_24"
-    android:drawablePadding="20dp" />
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="1dp"
-    android:layout_marginTop="40dp"
-    android:gravity="left"
-    android:textColor="@color/gray"
-    android:textSize="16sp"
-    android:text="Student ID"/>
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:text="Profile"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-<!-- Second EditText -->
-<EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:background="@drawable/edittext_border"
-    android:drawableStart="@drawable/ic_baseline_account_circle_24"
-    android:drawablePadding="20dp"/>
 
-<Button
-    android:id="@+id/button1"
-    android:layout_width="300dp"
-    android:layout_marginTop="20dp"
-    android:layout_height="wrap_content"
-    android:text=" Update User Details"
-    android:textColor="@color/black"
-    android:background="@drawable/button_border" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="1dp"
+        android:gravity="left"
+        android:text="Email"
+        android:textColor="@color/gray"
+        android:textSize="16sp" />
 
-<Button
-    android:id="@+id/button2"
-    android:layout_width="200dp"
-    android:layout_marginTop="20dp"
-    android:layout_height="wrap_content"
-    android:text="Log Out"
-    android:drawableStart="@drawable/ic_baseline_logout_24"
-    android:drawablePadding="20dp" />
+    <!-- First EditText -->
+    <EditText
+        android:id="@+id/txtUserEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_border"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawablePadding="20dp" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="1dp"
+        android:gravity="left"
+        android:text="Student ID"
+        android:textColor="@color/gray"
+        android:textSize="16sp" />
+
+    <!-- Second EditText -->
+    <EditText
+        android:id="@+id/txtStudentID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_border"
+        android:drawableStart="@drawable/ic_baseline_account_circle_24"
+        android:drawablePadding="20dp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_border"
+        android:text=" Update User Details"
+        android:textColor="@color/black" />
 
 
 </LinearLayout>

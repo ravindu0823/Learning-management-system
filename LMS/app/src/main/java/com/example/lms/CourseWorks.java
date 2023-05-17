@@ -9,11 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class courceWork2 extends Fragment {
+public class CourseWorks extends Fragment {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_cource_work2, container, false);
     }
