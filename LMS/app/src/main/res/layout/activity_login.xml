@@ -6,32 +6,28 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="15dp"
+    android:padding="0dp"
+    android:background="@color/dark_blue"
     tools:context=".Login">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="248dp"
-        android:background="@drawable/image_shape_background">
+        android:layout_height="367dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@drawable/login_pic">
         <!-- Add your views here -->
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/black" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="1dp"
         android:gravity="center"
         android:text="@string/Login"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -41,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        app:boxBackgroundColor="@color/white"
         app:startIconDrawable="@drawable/ic_person">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -48,6 +45,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -57,6 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        app:boxBackgroundColor="@color/white"
         app:endIconMode="password_toggle"
         app:startIconDrawable="@drawable/ic_baseline_password_24">
 
@@ -65,9 +66,44 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radio_group_id"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_button1_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lecturer"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginRight="16dp"
+        />
+
+        <RadioButton
+            android:id="@+id/radio_button2_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            />
+
+    </RadioGroup>
+
+
+
 
 
     <ProgressBar
@@ -80,7 +116,10 @@
         android:id="@+id/btnLogin"
         android:layout_width="133dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Login" />
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/light_blue"
+        android:minHeight="48dp"
+        android:text="Login"
+        android:textColor="@color/black" />
 
 </LinearLayout>

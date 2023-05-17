@@ -13,28 +13,51 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="285dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/shedule_pic_1">
+            <!-- Add your views here -->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <Button
             android:id="@+id/button1_shedule"
             android:layout_width="300dp"
             android:layout_height="90dp"
             android:layout_marginBottom="56dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/rounded_button_bg"
             android:text="Lecture Schedule"
             android:textSize="20sp"
-            app:backgroundTint="@color/purple_200"
+            app:backgroundTint="@color/black"
             tools:ignore="TextContrastCheck" />
 
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="285dp"
+            android:layout_height="128dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/shedule_pic_2">
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button2_shedule"
             android:layout_width="300dp"
             android:layout_height="90dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="56dp"
             android:background="@drawable/rounded_button_bg"
             android:text="Exam Schedule"
             android:textSize="20sp"
-            app:backgroundTint="@color/purple_200"
+            app:backgroundTint="@color/black"
             tools:ignore="TextContrastCheck" />
-
 
     </LinearLayout>
 

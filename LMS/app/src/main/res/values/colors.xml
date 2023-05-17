@@ -8,7 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#77037B</color>
+    <color name="dark_blue">#001A72</color>
     <color name="gray">#272D3D</color>
     <color name="blue">#1554F6</color>
+    <color name="light_blue">#65B3EC</color>
     <color name="appbar_color" />
+    <color name="lecture_mat_color">#65B3EC</color>
+    <color name="lecture_mat_text_color">#1554F6</color>
 </resources>
