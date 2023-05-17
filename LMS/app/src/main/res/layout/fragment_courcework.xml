@@ -53,7 +53,7 @@
         android:shrinkColumns="*"
         android:stretchColumns="*">
 
-        <TableRow>
+        <!--<TableRow>
 
             <TextView
                 android:background="@drawable/cell_border"
@@ -66,7 +66,7 @@
                 android:backgroundTint="@color/lecture_mat_color"
                 android:padding="10dp"
                 android:text="ab" />
-        </TableRow>
+        </TableRow>-->
 
         <TableRow>
 
@@ -74,13 +74,16 @@
                 android:background="@drawable/cell_border"
                 android:backgroundTint="@color/lecture_mat_color"
                 android:padding="10dp"
-                android:text="Due date" />
+                android:text="Due date"
+                android:textStyle="bold" />
 
             <TextView
                 android:background="@drawable/cell_border"
                 android:backgroundTint="@color/lecture_mat_color"
                 android:padding="10dp"
-                android:text="cd" />
+                android:text="cd"
+                android:gravity="center"
+                android:textStyle="bold" />
         </TableRow>
 
 
@@ -109,6 +112,7 @@
         android:textSize="15sp" />
 
     <RelativeLayout
+        android:id="@+id/relativeLayoutFileUpload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -127,15 +131,13 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/button_border"
         android:text="Submit"
-        android:textColor="@color/white"
         android:textSize="18sp" />
 
 
