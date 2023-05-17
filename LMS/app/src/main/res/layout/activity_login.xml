@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_blue"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="0dp"
-    android:background="@color/dark_blue"
     tools:context=".Login">
 
 
@@ -44,10 +44,10 @@
             android:id="@+id/txtUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
-            android:layout_marginTop="100dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
             android:layout_marginRight="20dp"
+            android:hint="Username"
             android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -65,9 +65,9 @@
             android:id="@+id/txtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:hint="@string/password"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -75,21 +75,20 @@
     <RadioGroup
         android:id="@+id/radio_group_id"
         android:layout_width="match_parent"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
         android:gravity="center"
+        android:orientation="horizontal"
         android:outlineAmbientShadowColor="@color/white"
-        android:outlineSpotShadowColor="@color/white"
-        android:layout_height="wrap_content">
+        android:outlineSpotShadowColor="@color/white">
 
         <RadioButton
             android:id="@+id/radio_button1_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lecturer"
-            android:textSize="20dp"
-            android:textColor="@color/white"
             android:layout_marginRight="16dp"
-        />
+            android:text="Lecturer"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
 
         <RadioButton
             android:id="@+id/radio_button2_id"
@@ -97,13 +96,9 @@
             android:layout_height="wrap_content"
             android:text="Student"
             android:textColor="@color/white"
-            android:textSize="20dp"
-            />
+            android:textSize="20dp" />
 
     </RadioGroup>
-
-
-
 
 
     <ProgressBar

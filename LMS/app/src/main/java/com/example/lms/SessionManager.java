@@ -18,6 +18,32 @@ public class SessionManager {
     String MODULE_NAME = "";
     String MODULE_DESCRIPTION = "";
 
+    String LECTURE_NAME = "";
+    String LECTURE_USERNAME = "";
+    String LECTURE_EMAIL = "";
+    String LECTURE_PHONE = "";
+    String LECTURE_PASSWORD = "";
+    String DEGREE_NAME = "";
+    int LECTURE_ID;
+
+    public void saveLecture(Lecturer lecture) {
+        LECTURE_NAME = lecture.getFullname();
+        LECTURE_USERNAME = lecture.getUsername();
+        LECTURE_EMAIL = lecture.getEmail();
+        LECTURE_PHONE = lecture.getPhone();
+        LECTURE_PASSWORD = lecture.getPassword();
+        DEGREE_NAME = lecture.getDegree();
+        LECTURE_ID = lecture.getLecturer_id();
+
+        editor.putString("lecture_name", LECTURE_NAME).commit();
+        editor.putString("lecture_username", LECTURE_USERNAME).commit();
+        editor.putString("lecture_email", LECTURE_EMAIL).commit();
+        editor.putString("lecture_phone", LECTURE_PHONE).commit();
+        editor.putString("lecture_password", LECTURE_PASSWORD).commit();
+        editor.putString("degree_name", DEGREE_NAME).commit();
+        editor.putInt("lecture_id", LECTURE_ID).commit();
+    }
+
     public void saveModuleName(Module module) {
         MODULE_NAME = module.getModuleName();
 
@@ -81,6 +107,10 @@ public class SessionManager {
 
     public int getStudentId() {
         return sharedPreferences.getInt("student_id", 0);
+    }
+
+    public int getLectureId() {
+        return sharedPreferences.getInt("lecture_id", 0);
     }
 
     public String getFullName() {

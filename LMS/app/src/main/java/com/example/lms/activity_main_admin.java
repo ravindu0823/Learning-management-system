@@ -8,6 +8,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -57,7 +58,11 @@ public class activity_main_admin extends AppCompatActivity implements Navigation
                 break;
 
             case R.id.nav_logout:
-                Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
+                SessionManager sessionManager = new SessionManager(activity_main_admin.this);
+                sessionManager.logout();
+
+                Intent intent = new Intent(activity_main_admin.this, Login.class);
+                startActivity(intent);
                 break;
         }
 

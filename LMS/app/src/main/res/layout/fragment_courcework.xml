@@ -3,13 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".UploadCourseWorks">
 
 
     <TextView
-
         android:id="@+id/text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,11 +45,11 @@
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-
-        android:background="@drawable/table_border"
-        android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/table_border"
         android:shrinkColumns="*"
         android:stretchColumns="*">
 
@@ -58,8 +57,8 @@
 
             <TextView
                 android:background="@drawable/cell_border"
-                android:padding="10dp"
                 android:backgroundTint="@color/lecture_mat_color"
+                android:padding="10dp"
                 android:text="Group" />
 
             <TextView
@@ -96,10 +95,7 @@
         android:text="File Submission"
         android:textAlignment="gravity"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/tableLayout"
-        app:layout_constraintStart_toStartOf="@+id/tableLayout"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/text4"
@@ -110,15 +106,11 @@
         android:text="Maximum file size: 150MB, maximum number of files: 1"
         android:textAlignment="gravity"
         android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView1"
-        app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        android:textSize="15sp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="150dp">
+        android:layout_height="wrap_content">
 
         <View
             android:id="@+id/myView"
@@ -130,47 +122,21 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_library_add_24"
-            android:layout_centerInParent="true" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="230dp">
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:text="Save Changes"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/guideline"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="70dp"
-                android:backgroundTint="@color/red"
-                android:text="Cancel"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/guideline"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="1.0" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_library_add_24" />
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button_border"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
 
 </LinearLayout>
