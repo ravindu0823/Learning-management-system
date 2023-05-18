@@ -59,6 +59,8 @@ public class CourseWorks extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 txtDueDate.setText("Due Date: " + snapshot.child("due_date").getValue().toString());
 
+                sessionManager.saveDueDate(snapshot.child("due_date").getValue().toString());
+
                 btnDownload.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

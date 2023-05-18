@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -34,6 +35,7 @@ public class UploadCourseWorks extends Fragment {
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://learning-management-syst-24c6c-default-rtdb.firebaseio.com/");
     FirebaseStorage storage = FirebaseStorage.getInstance();
     StorageReference storageReference = storage.getReferenceFromUrl("gs://learning-management-syst-24c6c.appspot.com/");
+    TextView tableDueDate;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,6 +44,17 @@ public class UploadCourseWorks extends Fragment {
 
         relativeLayout = view.findViewById(R.id.relativeLayoutFileUpload);
         upload_btn = view.findViewById(R.id.btnSubmit);
+        tableDueDate = view.findViewById(R.id.table_due_date);
+
+        relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectFiles();
+            }
+        });
+
+        SessionManager sessionManager = new SessionManager(getContext());
+        tableDueDate.setText(sessionManager.getDueDate());
 
         return view;
     }
@@ -58,11 +71,20 @@ public class UploadCourseWorks extends Fragment {
 
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1 && resultCode == RESULT_OK && data != null && data.getData() != null) {
-            UploadFiles(data.getData());
+            upload_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    UploadFiles(data.getData());
+                }
+            });
         }
     }
 
     private void UploadFiles(Uri data) {
+        SessionManager sessionManager = new SessionManager(getContext());
+        String moduleName = sessionManager.getModuleName();
+        String degree = sessionManager.getDegree();
+
         final ProgressDialog progressDialog = new ProgressDialog(getContext());
         progressDialog.setTitle("Uploading......");
 
@@ -74,9 +96,11 @@ public class UploadCourseWorks extends Fragment {
                 while (!uriTask.isComplete()) ;
                 Uri url = uriTask.getResult();
 
-                /*PDFClass pdfClass = new PDFClass(pdf_name.getText().toString(), url.toString());
-                databaseReference.child("Software_Engineering").child("Artificial_Intelligence").child("Materials").child(databaseReference.push().getKey()).setValue(pdfClass);*/
-                // TODO: THAWA HADANNA THIYENAWAAAAAAA
+                // PDFClass pdfClass = new PDFClass(pdf_name.getText().toString(), url.toString());
+                String key = databaseReference.push().getKey();
+                assert key != null;
+                databaseReference.child("Module").child(degree).child(moduleName).child("Submitted_Courseworks").child(key).child("student_id").setValue(sessionManager.getStudentId());
+                databaseReference.child("Module").child(degree).child(moduleName).child("Submitted_Courseworks").child(key).child("file_path").setValue(url.toString());
 
                 Toast.makeText(getContext(), "File Uploded!!", Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();

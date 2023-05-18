@@ -26,6 +26,13 @@ public class SessionManager {
     String DEGREE_NAME = "";
     int LECTURE_ID;
 
+    String DUE_DATE = "";
+
+    public void saveDueDate(String dueDate) {
+        DUE_DATE = dueDate;
+        editor.putString("due_date", DUE_DATE).commit();
+    }
+
     public void saveLecture(Lecturer lecture) {
         LECTURE_NAME = lecture.getFullname();
         LECTURE_USERNAME = lecture.getUsername();
@@ -123,6 +130,10 @@ public class SessionManager {
 
     public String getModuleName() {
         return sharedPreferences.getString("module_name", null);
+    }
+
+    public String getDueDate() {
+        return sharedPreferences.getString("due_date", null);
     }
 
 }

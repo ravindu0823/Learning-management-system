@@ -78,6 +78,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/table_due_date"
                 android:background="@drawable/cell_border"
                 android:backgroundTint="@color/lecture_mat_color"
                 android:padding="10dp"
