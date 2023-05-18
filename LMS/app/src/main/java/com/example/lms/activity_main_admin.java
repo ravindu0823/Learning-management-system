@@ -37,7 +37,7 @@ public class activity_main_admin extends AppCompatActivity implements Navigation
         toggle.syncState();
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AdminCardView()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.admin_fragment_container, new AdminCardView()).commit();
             navigationView.setCheckedItem(R.id.nav_profile);
         }
     }
@@ -46,15 +46,15 @@ public class activity_main_admin extends AppCompatActivity implements Navigation
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_profile:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new admin_profile()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.admin_fragment_container, new admin_profile()).commit();
                 break;
 
             case R.id.nav_module:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AdminCardView()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.admin_fragment_container, new AdminCardView()).commit();
                 break;
 
             case R.id.nav_schedule:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new admin_shedule()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.admin_fragment_container, new admin_shedule()).commit();
                 break;
 
             case R.id.nav_logout:

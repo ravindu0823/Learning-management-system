@@ -4,84 +4,123 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/lecture_mat_color"
+    android:orientation="vertical"
     tools:context=".AdminCourseWorks">
 
-    <TextView
-
-        android:id="@+id/text1"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
         android:layout_marginTop="50dp"
-        android:drawableStart="@drawable/link"
-        android:drawablePadding="20dp"
-        android:text="Course Work Submission"
-        android:textAlignment="gravity"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/parent"
-        app:layout_constraintStart_toStartOf="@+id/parent"
-        app:layout_constraintTop_toBottomOf="@+id/parent" />
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Slide1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_picture_as_pdf_24"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="Final Courcework"
+                android:textColor="@color/lecture_mat_text_color"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtLectureDueDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="35dp"
+                android:text=""
+                android:textColor="@color/lecture_mat_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLectureDownloadCourseWork"
+            android:layout_width="133dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/dark_blue"
+            android:minHeight="48dp"
+            android:text="Download"
+            android:textColor="@color/white" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="20dp"
-        android:drawableStart="@drawable/link"
-        android:drawablePadding="20dp"
-        android:text="Course Work Submission"
-        android:textAlignment="gravity"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/black"
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+        android:text="Upload Coursework"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView1"
-        app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
 
     <TextView
-        android:id="@+id/text3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="20dp"
-        android:drawableStart="@drawable/link"
-        android:drawablePadding="20dp"
-        android:text="Course Work Submission"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Maximum file size: 150MB, maximum number of files: 1"
         android:textAlignment="gravity"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/text4"
+    <RelativeLayout
+        android:id="@+id/relativeLayoutCoursework"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="390dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rectangle_border" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_library_add_24" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/txtCourseWorkDueDate"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:drawableStart="@drawable/link"
-        android:drawablePadding="20dp"
-        android:text="Course Work Submission"
-        android:textAlignment="gravity"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:hint="Due Date" />
 
     <Button
-        android:id="@+id/btnDownloadCourseWork"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="90dp"
-        android:layout_marginLeft="90dp"
-        android:backgroundTint="@color/black"
-        android:minHeight="48dp"
-        android:text="View Uploads if you want"
-        android:textColor="@color/white" />
+        android:id="@+id/btnUploadCourseWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/dark_blue"
+        android:text="Upload"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
 </LinearLayout>

@@ -136,4 +136,28 @@ public class SessionManager {
         return sharedPreferences.getString("due_date", null);
     }
 
+    public String getLectureName() {
+        return sharedPreferences.getString("lecture_name", null);
+    }
+
+    public String getLectureUsername() {
+        return sharedPreferences.getString("lecture_username", null);
+    }
+
+    public String getLectureEmail() {
+        return sharedPreferences.getString("lecture_email", null);
+    }
+
+    public String getLecturePhone() {
+        return sharedPreferences.getString("lecture_phone", null);
+    }
+
+    public String getLecturePassword() {
+        return sharedPreferences.getString("lecture_password", null);
+    }
+
+    public String getDegreeName() {
+        return sharedPreferences.getString("degree_name", null);
+    }
+
 }

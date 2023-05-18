@@ -7,91 +7,13 @@
     android:orientation="vertical"
     tools:context=".AdminCardView">
 
-    <androidx.cardview.widget.CardView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lectureRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
-        app:cardBackgroundColor="@color/gray"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="8dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:contentDescription="TODO"
-            android:scaleType="centerCrop"
-            android:src="@drawable/pic01" />
+        android:layout_height="wrap_content" >
 
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_marginTop="100dp"
-            android:backgroundTint="@color/white"
-            android:text="Module 01"
-            android:textColor="@color/black" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
-        app:cardBackgroundColor="@color/gray"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="8dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/pic02" />
-
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_marginTop="100dp"
-            android:backgroundTint="@color/white"
-            android:text="Module 01"
-            android:textColor="@color/black" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
-        app:cardBackgroundColor="@color/gray"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="8dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/pic03" />
-
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_marginTop="100dp"
-            android:backgroundTint="@color/white"
-            android:text="Module 01"
-            android:textColor="@color/black" />
-
-    </androidx.cardview.widget.CardView>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </LinearLayout>

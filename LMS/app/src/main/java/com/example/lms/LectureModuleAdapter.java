@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,27 +14,27 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.MyViewHolder> {
+public class LectureModuleAdapter extends RecyclerView.Adapter<LectureModuleAdapter.LectureModuleViewHolder> {
 
     Context context;
     ArrayList<Module> list;
     int[] myImageList = new int[]{R.drawable.artificialinterlligence, R.drawable.big_data_analytics, R.drawable.datbase_management_system, R.drawable.object_oriented, R.drawable.web_development};
 
-    public ModuleAdapter(Context context, ArrayList<Module> list) {
+    public LectureModuleAdapter(Context context, ArrayList<Module> list) {
         this.context = context;
         this.list = list;
     }
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public LectureModuleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.module_item, parent, false);
 
-        return new MyViewHolder(v);
+        return new LectureModuleViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull LectureModuleViewHolder holder, int position) {
         Module module = list.get(position);
 
         holder.moduleName.setText(module.getModuleDescription());
@@ -53,8 +52,8 @@ public class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.MyViewHold
                 SessionManager sessionManager = new SessionManager(context);
                 sessionManager.saveModuleName(module);
 
-                LectureMaterials lectureMaterials = new LectureMaterials();
-                ((MainActivity) context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, lectureMaterials).commit();
+                AdminLectureMaterials adminLectureMaterials = new AdminLectureMaterials();
+                ((activity_main_admin) context).getSupportFragmentManager().beginTransaction().replace(R.id.admin_fragment_container, adminLectureMaterials).commit();
             }
         });
 
@@ -64,8 +63,8 @@ public class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.MyViewHold
                 SessionManager sessionManager = new SessionManager(context);
                 sessionManager.saveModuleName(module);
 
-                CourseWorks courseWorks = new CourseWorks();
-                ((MainActivity) context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, courseWorks).commit();
+                AdminCourseWorks adminCourseWorks = new AdminCourseWorks();
+                ((activity_main_admin) context).getSupportFragmentManager().beginTransaction().replace(R.id.admin_fragment_container, adminCourseWorks).commit();
             }
         });
     }
@@ -75,13 +74,13 @@ public class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.MyViewHold
         return list.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class LectureModuleViewHolder extends RecyclerView.ViewHolder {
 
         TextView moduleName, degreeProgram;
         Button btnLectureMaterials, btnAssignments;
         ImageView moduleImage;
 
-        public MyViewHolder(@NonNull View itemView) {
+        public LectureModuleViewHolder(@NonNull View itemView) {
             super(itemView);
 
             moduleName = itemView.findViewById(R.id.module_name);
@@ -91,5 +90,4 @@ public class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.MyViewHold
             moduleImage = itemView.findViewById(R.id.module_image);
         }
     }
-
 }
