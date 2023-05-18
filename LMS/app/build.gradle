@@ -46,7 +46,7 @@ dependencies {
 
     implementation platform('com.google.firebase:firebase-bom:31.3.0')
     implementation 'com.google.firebase:firebase-storage'
-    implementation 'org.apache.poi:poi:4.1.2'
+
 
 
 }
