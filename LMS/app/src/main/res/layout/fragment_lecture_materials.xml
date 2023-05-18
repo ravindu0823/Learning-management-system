@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="367dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="60dp"
             android:background="@drawable/lec_mar_pic" />
 
     </LinearLayout>

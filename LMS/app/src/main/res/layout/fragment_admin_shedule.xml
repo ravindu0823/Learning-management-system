@@ -20,7 +20,7 @@
             android:layout_marginRight="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginBottom="0dp"
-            android:background="@drawable/shedule_pic_1">
+            android:background="@drawable/shedule_pic_2">
             <!-- Add your views here -->
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -44,7 +44,7 @@
             android:layout_marginTop="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginBottom="0dp"
-            android:background="@drawable/shedule_pic_2">
+            android:background="@drawable/shedule_pic_1">
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button

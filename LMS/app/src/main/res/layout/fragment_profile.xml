@@ -60,14 +60,15 @@
         android:layout_marginBottom="25dp"
         android:gravity="center"
         android:text="Profile"
-        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="365dp"
+        android:layout_marginTop="400dp"
         android:layout_marginBottom="1dp"
         android:layout_marginLeft="20dp"
         android:gravity="left"
@@ -80,7 +81,7 @@
         android:id="@+id/txtUserEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="430dp"
         android:background="@drawable/edittext_border"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
@@ -91,7 +92,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="470dp"
+        android:layout_marginTop="510dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="1dp"
         android:gravity="left"
@@ -103,7 +104,7 @@
         android:id="@+id/txtStudentID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="540dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/edittext_border"

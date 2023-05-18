@@ -95,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="60dp"
         android:text="File Submission"
         android:textAlignment="gravity"
         android:textColor="@color/black"
@@ -106,7 +106,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="Maximum file size: 150MB, maximum number of files: 1"
         android:textAlignment="gravity"
         android:textColor="@color/black"
@@ -115,7 +115,10 @@
     <RelativeLayout
         android:id="@+id/relativeLayoutFileUpload"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
 
         <View
             android:id="@+id/myView"
@@ -138,7 +141,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
         android:text="Submit"
         android:textSize="18sp" />

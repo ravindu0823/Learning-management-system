@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/pdf"
             android:drawablePadding="30dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Day1"
             android:textColor="@color/lecture_mat_text_color"
@@ -26,6 +27,7 @@
         <Button
             android:id="@+id/btnDownloadMaterial"
             android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:backgroundTint="@color/dark_blue"
