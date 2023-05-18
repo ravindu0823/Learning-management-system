@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.nav_marks:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ModuleOverview()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Marks()).commit();
                 break;
 
             case R.id.nav_logout:
